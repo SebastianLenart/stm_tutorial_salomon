@@ -1,0 +1,10 @@
+14:58:24 **** Incremental Build of configuration Debug for project Tutorial_salomon ****
+make -j8 all 
+arm-none-eabi-size   Tutorial_salomon.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12400	     20	   1708	  14128	   3730	Tutorial_salomon.elf
+Finished building: default.size.stdout
+ 
+
+14:58:24 Build Finished. 0 errors, 0 warnings. (took 265ms)
+
