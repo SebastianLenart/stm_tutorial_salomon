@@ -1,0 +1,32 @@
+/*
+ * button.c
+ *
+ *  Created on: Jan 16, 2024
+ *      Author: Lenovo
+ */
+
+#include "button.h"
+#include "main.h"
+
+
+
+// Button init
+
+// Time setting functions
+
+// Register callbacks
+
+// States routine
+
+// States machine
+
+
+
+
+
+
+
+
+
+
+

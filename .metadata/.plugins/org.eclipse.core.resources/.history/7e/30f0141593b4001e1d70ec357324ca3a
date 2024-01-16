@@ -1,0 +1,33 @@
+/*
+ * button.c
+ *
+ *  Created on: Jan 16, 2024
+ *      Author: Lenovo
+ */
+
+#include "main.h" // kolejnosc ma znaczenie
+#include "button.h"
+
+// Button init
+void ButtonInitKey(TButton *Key, GPIO_TypeDef *GpioPort, uint16_t GpioPin,
+		uint32_t TimerDeboune) {
+	Key->state = IDLE;
+	Key->GpioPort = GpioPort;
+	Key->GpioPin = GpioPin;
+	Key->TimerDeboune = TimerDeboune;
+}
+// Time setting functions
+
+// Register callbacks
+
+// States routine
+
+// States machine
+void ButtonTask(TButton *Key) {
+	switch (Key->state) {
+	case IDLE:
+		//
+		break;
+	}
+}
+

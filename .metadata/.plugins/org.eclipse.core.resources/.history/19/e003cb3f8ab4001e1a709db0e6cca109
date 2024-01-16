@@ -1,0 +1,29 @@
+/*
+ * button.h
+ *
+ *  Created on: Jan 16, 2024
+ *      Author: Lenovo
+ */
+
+#ifndef INC_BUTTON_H_
+#define INC_BUTTON_H_
+
+// states for state machine
+typedef enum {
+	IDLE = 0, DEBOUNCE, PRESSED
+} BUTTON_STATE;
+
+// struct for button
+typedef struct {
+	BUTTON_STATE state;
+//	GPIO_TypeDef* GpioPort;
+//	uint16_t GpioPin;
+//	uint32_t TimerDeboune;
+//	uint32_t lastTick;
+	void(*ButtonPressed)(void);
+
+} TButton;
+
+// public functions
+
+#endif /* INC_BUTTON_H_ */

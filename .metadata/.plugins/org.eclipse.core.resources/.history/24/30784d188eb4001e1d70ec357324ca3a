@@ -1,0 +1,36 @@
+/*
+ * button.c
+ *
+ *  Created on: Jan 16, 2024
+ *      Author: Lenovo
+ */
+
+#include "main.h" // kolejnosc ma znaczenie
+#include "button.h"
+
+
+
+
+// Button init
+void ButtonInitKey(TButton* Key, GPIO_TypeDef* GpioPort, uint16_t GpioPin)
+{
+
+}
+// Time setting functions
+
+// Register callbacks
+
+// States routine
+
+// States machine
+
+
+
+
+
+
+
+
+
+
+
