@@ -88,7 +88,7 @@ int main(void)
   MX_GPIO_Init();
   MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
-  ButtonInitKey(&BlueKey, B1_GPIO_Port, B1_Pin, 20);
+  ButtonInitKey(&BlueKey, B1_GPIO_Port, B1_Pin, 50, 2000, 500);
   ButtonRegisterPressCallback(&BlueKey, ToggleLed);
   /* USER CODE END 2 */
 

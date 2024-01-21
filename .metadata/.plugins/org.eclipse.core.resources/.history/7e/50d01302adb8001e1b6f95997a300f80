@@ -1,0 +1,96 @@
+/*
+ * button.c
+ *
+ *  Created on: Jan 16, 2024
+ *      Author: Lenovo
+ */
+
+#include "main.h" // kolejnosc ma znaczenie
+#include "button.h"
+
+static uint8_t ButtonIsPressed(TButton *Key) {
+	if (GPIO_PIN_RESET == (HAL_GPIO_ReadPin(Key->GpioPort, Key->GpioPin))) {
+		return 1;
+	} else {
+		return 0;
+	}
+}
+
+// Button init
+void ButtonInitKey(TButton *Key, GPIO_TypeDef *GpioPort, uint16_t GpioPin,
+		uint32_t TimerDeboune, uint32_t TimerLongPress, uint32_t TimerRepeat) {
+	Key->state = IDLE;
+	Key->GpioPort = GpioPort;
+	Key->GpioPin = GpioPin;
+	Key->TimerDeboune = TimerDeboune;
+	Key->TimerLongPress = TimerLongPress;
+	Key->TimerRepeat = TimerRepeat;
+}
+// Time setting functions
+void ButtonSetDebounceTimer(TButton *Key, uint8_t Miliseconds) {
+	Key->TimerDeboune = Miliseconds;
+}
+
+// Register callbacks
+void ButtonRegisterPressCallback(TButton *Key, void (*Callback)()) {
+	// Without () you set address, with () you call function
+	Key->ButtonPressed = Callback; // Set new callback for button press
+}
+void ButtonLongPress(TButton *Key, void (*Callback)()) {
+	Key->ButtonPressed = Callback;
+}
+
+void ButtonRepeat(TButton *Key, void (*Callback)()) {
+	Key->ButtonRepeat = Callback;
+}
+
+// States routine
+// Te funkcje sa prywatne i nie ma ich w .h
+void ButtonIdleRoutine(TButton *Key) {
+	if (ButtonIsPressed(Key)) {
+		Key->state = DEBOUNCE;
+		Key->lastTick = HAL_GetTick();
+	}
+}
+
+void ButtonDebunceRoutine(TButton *Key) {
+	if ((HAL_GetTick() - Key->lastTick) > Key->TimerDeboune) {
+		if (ButtonIsPressed(Key)) {
+			Key->state = PRESSED;
+			if (Key->ButtonPressed != NULL) {
+				Key->ButtonPressed();
+			}
+		} else {
+			Key->state = IDLE;
+		}
+	}
+}
+
+void ButtonPressedRoutine(TButton *Key) {
+	if (!ButtonIsPressed(Key)) {
+		Key->state = IDLE;
+	}
+}
+
+void ButtonRepeatRoutin(TButton *Key) {
+
+}
+
+// States machine
+void ButtonTask(TButton *Key) {
+	switch (Key->state) {
+	case IDLE:
+		ButtonIdleRoutine(Key);
+		break;
+	case DEBOUNCE:
+		ButtonDebunceRoutine(Key);
+		break;
+	case PRESSED:
+		ButtonPressedRoutine(Key);
+		break;
+	case REPEAT:
+		ButtonRepeatRoutin(Key);
+		break;
+	}
+}
+
