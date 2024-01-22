@@ -236,3 +236,258 @@ Finished building: default.size.stdout
  
 Finished building: State_machine.list
  
+22:05:46 **** Incremental Build of configuration Debug for project Blink_getTick ****
+make -j8 all 
+arm-none-eabi-size   Blink_getTick.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12492	     20	   1716	  14228	   3794	Blink_getTick.elf
+Finished building: default.size.stdout
+ 
+22:05:47 **** Incremental Build of configuration Debug for project State_machine ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/button.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/button.d" -MT"Core/Src/button.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/button.o"
+arm-none-eabi-gcc -o "State_machine.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\STM\stm_tutorial_salomon\State_machine\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="State_machine.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: State_machine.elf
+ 
+arm-none-eabi-size   State_machine.elf 
+arm-none-eabi-objdump -h -S  State_machine.elf  > "State_machine.list"
+   text	   data	    bss	    dec	    hex	filename
+  12912	     20	   1748	  14680	   3958	State_machine.elf
+Finished building: default.size.stdout
+ 
+Finished building: State_machine.list
+ 
+22:16:18 **** Incremental Build of configuration Debug for project Blink_getTick ****
+make -j8 all 
+arm-none-eabi-size   Blink_getTick.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12492	     20	   1716	  14228	   3794	Blink_getTick.elf
+Finished building: default.size.stdout
+ 
+22:16:18 **** Incremental Build of configuration Debug for project State_machine ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/button.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/button.d" -MT"Core/Src/button.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/button.o"
+arm-none-eabi-gcc -o "State_machine.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\STM\stm_tutorial_salomon\State_machine\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="State_machine.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: State_machine.elf
+ 
+arm-none-eabi-size   State_machine.elf 
+arm-none-eabi-objdump -h -S  State_machine.elf  > "State_machine.list"
+   text	   data	    bss	    dec	    hex	filename
+  12972	     20	   1748	  14740	   3994	State_machine.elf
+Finished building: default.size.stdout
+ 
+Finished building: State_machine.list
+ 
+22:29:11 **** Incremental Build of configuration Debug for project Blink_getTick ****
+make -j8 all 
+arm-none-eabi-size   Blink_getTick.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12492	     20	   1716	  14228	   3794	Blink_getTick.elf
+Finished building: default.size.stdout
+ 
+22:29:11 **** Incremental Build of configuration Debug for project State_machine ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "State_machine.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\STM\stm_tutorial_salomon\State_machine\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="State_machine.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: State_machine.elf
+ 
+arm-none-eabi-size   State_machine.elf 
+arm-none-eabi-objdump -h -S  State_machine.elf  > "State_machine.list"
+   text	   data	    bss	    dec	    hex	filename
+  12972	     20	   1748	  14740	   3994	State_machine.elf
+Finished building: default.size.stdout
+ 
+Finished building: State_machine.list
+ 
+22:31:55 **** Incremental Build of configuration Debug for project Blink_getTick ****
+make -j8 all 
+arm-none-eabi-size   Blink_getTick.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12492	     20	   1716	  14228	   3794	Blink_getTick.elf
+Finished building: default.size.stdout
+ 
+22:31:55 **** Incremental Build of configuration Debug for project State_machine ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:94:41: error: invalid use of void expression
+   94 |   ButtonRegisterPressCallback(&BlueKey, TurnOnLed());
+      |                                         ^~~~~~~~~~~
+../Core/Src/main.c:95:37: error: invalid use of void expression
+   95 |   ButtonLongPressCallback(&BlueKey, TurnOffLed());
+      |                                     ^~~~~~~~~~~~
+../Core/Src/main.c:96:34: error: invalid use of void expression
+   96 |   ButtonRepeatCallback(&BlueKey, ToggleLed());
+      |                                  ^~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:43: Core/Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+22:32:58 **** Incremental Build of configuration Debug for project Blink_getTick ****
+make -j8 all 
+arm-none-eabi-size   Blink_getTick.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12492	     20	   1716	  14228	   3794	Blink_getTick.elf
+Finished building: default.size.stdout
+ 
+22:32:58 **** Incremental Build of configuration Debug for project State_machine ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "State_machine.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\STM\stm_tutorial_salomon\State_machine\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="State_machine.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: State_machine.elf
+ 
+arm-none-eabi-size   State_machine.elf 
+arm-none-eabi-objdump -h -S  State_machine.elf  > "State_machine.list"
+   text	   data	    bss	    dec	    hex	filename
+  13092	     20	   1748	  14860	   3a0c	State_machine.elf
+Finished building: default.size.stdout
+ 
+Finished building: State_machine.list
+ 
+22:33:27 **** Incremental Build of configuration Debug for project Blink_getTick ****
+make -j8 all 
+arm-none-eabi-size   Blink_getTick.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12492	     20	   1716	  14228	   3794	Blink_getTick.elf
+Finished building: default.size.stdout
+ 
+22:33:27 **** Incremental Build of configuration Debug for project State_machine ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/button.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/button.d" -MT"Core/Src/button.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/button.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "State_machine.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\STM\stm_tutorial_salomon\State_machine\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="State_machine.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: State_machine.elf
+ 
+arm-none-eabi-size   State_machine.elf 
+arm-none-eabi-objdump -h -S  State_machine.elf  > "State_machine.list"
+   text	   data	    bss	    dec	    hex	filename
+  13092	     20	   1748	  14860	   3a0c	State_machine.elf
+Finished building: default.size.stdout
+ 
+Finished building: State_machine.list
+ 
+22:33:43 **** Incremental Build of configuration Debug for project State_machine ****
+make -j8 all 
+arm-none-eabi-size   State_machine.elf 
+   text	   data	    bss	    dec	    hex	filename
+  13092	     20	   1748	  14860	   3a0c	State_machine.elf
+Finished building: default.size.stdout
+ 
+22:37:05 **** Incremental Build of configuration Debug for project Blink_getTick ****
+make -j8 all 
+arm-none-eabi-size   Blink_getTick.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12492	     20	   1716	  14228	   3794	Blink_getTick.elf
+Finished building: default.size.stdout
+ 
+22:37:05 **** Incremental Build of configuration Debug for project State_machine ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "State_machine.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\STM\stm_tutorial_salomon\State_machine\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="State_machine.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: State_machine.elf
+ 
+arm-none-eabi-size   State_machine.elf 
+arm-none-eabi-objdump -h -S  State_machine.elf  > "State_machine.list"
+   text	   data	    bss	    dec	    hex	filename
+  13108	     20	   1748	  14876	   3a1c	State_machine.elf
+Finished building: default.size.stdout
+ 
+Finished building: State_machine.list
+ 
+22:37:08 **** Incremental Build of configuration Debug for project State_machine ****
+make -j8 all 
+arm-none-eabi-size   State_machine.elf 
+   text	   data	    bss	    dec	    hex	filename
+  13108	     20	   1748	  14876	   3a1c	State_machine.elf
+Finished building: default.size.stdout
+ 
+22:39:08 **** Incremental Build of configuration Debug for project State_machine ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "State_machine.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\STM\stm_tutorial_salomon\State_machine\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="State_machine.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: State_machine.elf
+ 
+arm-none-eabi-size   State_machine.elf 
+arm-none-eabi-objdump -h -S  State_machine.elf  > "State_machine.list"
+   text	   data	    bss	    dec	    hex	filename
+  13092	     20	   1748	  14860	   3a0c	State_machine.elf
+Finished building: default.size.stdout
+ 
+Finished building: State_machine.list
+ 
+22:39:56 **** Incremental Build of configuration Debug for project State_machine ****
+make -j8 all 
+arm-none-eabi-size   State_machine.elf 
+   text	   data	    bss	    dec	    hex	filename
+  13092	     20	   1748	  14860	   3a0c	State_machine.elf
+Finished building: default.size.stdout
+ 
+22:42:20 **** Incremental Build of configuration Debug for project State_machine ****
+make -j8 all 
+arm-none-eabi-size   State_machine.elf 
+   text	   data	    bss	    dec	    hex	filename
+  13092	     20	   1748	  14860	   3a0c	State_machine.elf
+Finished building: default.size.stdout
+ 
+22:42:56 **** Incremental Build of configuration Debug for project State_machine ****
+make -j8 all 
+arm-none-eabi-size   State_machine.elf 
+   text	   data	    bss	    dec	    hex	filename
+  13092	     20	   1748	  14860	   3a0c	State_machine.elf
+Finished building: default.size.stdout
+ 
+22:46:09 **** Incremental Build of configuration Debug for project State_machine ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "State_machine.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\STM\stm_tutorial_salomon\State_machine\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="State_machine.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: State_machine.elf
+ 
+arm-none-eabi-size   State_machine.elf 
+arm-none-eabi-objdump -h -S  State_machine.elf  > "State_machine.list"
+   text	   data	    bss	    dec	    hex	filename
+  13044	     20	   1748	  14812	   39dc	State_machine.elf
+Finished building: default.size.stdout
+ 
+Finished building: State_machine.list
+ 
+22:46:46 **** Incremental Build of configuration Debug for project State_machine ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "State_machine.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\STM\stm_tutorial_salomon\State_machine\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="State_machine.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: State_machine.elf
+ 
+arm-none-eabi-size   State_machine.elf 
+arm-none-eabi-objdump -h -S  State_machine.elf  > "State_machine.list"
+   text	   data	    bss	    dec	    hex	filename
+  13068	     20	   1748	  14836	   39f4	State_machine.elf
+Finished building: default.size.stdout
+ 
+Finished building: State_machine.list
+ 
+22:47:42 **** Incremental Build of configuration Debug for project State_machine ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "State_machine.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\STM\stm_tutorial_salomon\State_machine\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="State_machine.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: State_machine.elf
+ 
+arm-none-eabi-size   State_machine.elf 
+arm-none-eabi-objdump -h -S  State_machine.elf  > "State_machine.list"
+   text	   data	    bss	    dec	    hex	filename
+  13068	     20	   1748	  14836	   39f4	State_machine.elf
+Finished building: default.size.stdout
+ 
+Finished building: State_machine.list
+ 
+22:49:50 **** Incremental Build of configuration Debug for project State_machine ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/button.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/button.d" -MT"Core/Src/button.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/button.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "State_machine.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\STM\stm_tutorial_salomon\State_machine\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="State_machine.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: State_machine.elf
+ 
+arm-none-eabi-size   State_machine.elf 
+arm-none-eabi-objdump -h -S  State_machine.elf  > "State_machine.list"
+   text	   data	    bss	    dec	    hex	filename
+  13092	     20	   1748	  14860	   3a0c	State_machine.elf
+Finished building: default.size.stdout
+ 
+Finished building: State_machine.list
+ 

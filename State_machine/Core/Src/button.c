@@ -44,11 +44,11 @@ void ButtonRegisterPressCallback(TButton *Key, void *Callback) {
 	// Without () you set address, with () you call function
 	Key->ButtonPressed = Callback; // Set new callback for button press
 }
-void ButtonLongPressCallback(TButton *Key, void *Callback) {
-	Key->ButtonPressed = Callback;
+void ButtonRegisterLongPressCallback(TButton *Key, void *Callback) {
+	Key->ButtonLongPress = Callback;
 }
 
-void ButtonRepeatCallback(TButton *Key, void *Callback) {
+void ButtonRegisterRepeatCallback(TButton *Key, void *Callback) {
 	Key->ButtonRepeat = Callback;
 }
 
@@ -79,8 +79,9 @@ void ButtonPressedRoutine(TButton *Key) {
 	if (!ButtonIsPressed(Key)) {
 		Key->state = IDLE;
 	} else {
-		if((HAL_GetTick() - Key->lastTick) > Key->TimerLongPress) {
+		if ((HAL_GetTick() - Key->lastTick) > Key->TimerLongPress) {
 			Key->state = REPEAT;
+			Key->lastTick = HAL_GetTick();
 			if (Key->ButtonLongPress != NULL) {
 				Key->ButtonLongPress();
 			}
@@ -89,7 +90,16 @@ void ButtonPressedRoutine(TButton *Key) {
 }
 
 void ButtonRepeatRoutine(TButton *Key) {
-	// 11 minuta
+	if (!ButtonIsPressed(Key)) {
+		Key->state = IDLE;
+	} else {
+		if ((HAL_GetTick() - Key->lastTick) > Key->TimerRepeat) {
+			Key->lastTick = HAL_GetTick();
+			if (Key->ButtonLongPress != NULL) {
+				Key->ButtonRepeat();
+			}
+		}
+	}
 }
 
 // States machine

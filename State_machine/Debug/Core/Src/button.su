@@ -4,10 +4,10 @@
 ../Core/Src/button.c:34:6:ButtonSetTimerLongPress	16	static
 ../Core/Src/button.c:38:6:ButtonSetTimerRepeat	16	static
 ../Core/Src/button.c:43:6:ButtonRegisterPressCallback	16	static
-../Core/Src/button.c:47:6:ButtonLongPressCallback	16	static
-../Core/Src/button.c:51:6:ButtonRepeatCallback	16	static
+../Core/Src/button.c:47:6:ButtonRegisterLongPressCallback	16	static
+../Core/Src/button.c:51:6:ButtonRegisterRepeatCallback	16	static
 ../Core/Src/button.c:57:6:ButtonIdleRoutine	16	static
 ../Core/Src/button.c:64:6:ButtonDebunceRoutine	16	static
-../Core/Src/button.c:77:6:ButtonPressedRoutine	16	static
-../Core/Src/button.c:83:6:ButtonRepeatRoutin	16	static
-../Core/Src/button.c:88:6:ButtonTask	16	static
+../Core/Src/button.c:78:6:ButtonPressedRoutine	16	static
+../Core/Src/button.c:92:6:ButtonRepeatRoutine	16	static
+../Core/Src/button.c:106:6:ButtonTask	16	static

@@ -50,6 +50,8 @@ TButton BlueKey;
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 /* USER CODE BEGIN PFP */
+void TurnOnLed(void);
+void TurnOffLed(void);
 void ToggleLed(void);
 /* USER CODE END PFP */
 
@@ -89,7 +91,9 @@ int main(void)
   MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
   ButtonInitKey(&BlueKey, B1_GPIO_Port, B1_Pin, 50, 2000, 500);
-  ButtonRegisterPressCallback(&BlueKey, ToggleLed);
+  ButtonRegisterPressCallback(&BlueKey, TurnOnLed);
+  ButtonRegisterLongPressCallback(&BlueKey, TurnOffLed);
+  ButtonRegisterRepeatCallback(&BlueKey, ToggleLed);
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -156,6 +160,14 @@ void SystemClock_Config(void)
 }
 
 /* USER CODE BEGIN 4 */
+void TurnOnLed(void){
+	HAL_GPIO_WritePin(LD2_GPIO_Port, LD2_Pin, GPIO_PIN_SET);
+}
+
+void TurnOffLed(void){
+	HAL_GPIO_WritePin(LD2_GPIO_Port, LD2_Pin, GPIO_PIN_RESET);
+}
+
 void ToggleLed(void) {
 	HAL_GPIO_TogglePin(LD2_GPIO_Port, LD2_Pin);
 }
